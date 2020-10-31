@@ -36,11 +36,23 @@ function TimerFn() {
 
 
 
+const Counter=()=>{
+  const [start, setStart]=useState(0);
+  const handleSetStart=()=>setStart(start+1);
+
+  setTimeout(()=>handleSetStart(),1000);
+  return <p>{start}</p>;
+}
+
+
+
+
 export default function App() {
   return (
     <div className="App">
       <TimerClass />
       <TimerFn />
+      <Counter/>
     </div>
   )
 }
